@@ -40,7 +40,7 @@ post_install() {
     
 
     # D O N E! #
-    echo -e "\n${BGreen}[✔] D O N E \n"
+    echo -e "\n${BGreen}[✔] D O N E \n" ${Color_Off}
 
 }
 
@@ -63,7 +63,7 @@ post_upgrade() {
 
     
     # D O N E! #
-    echo -e "\n${BGreen}[✔] D O N E \n"
+    echo -e "\n${BGreen}[✔] D O N E \n" ${Color_Off}
 
 }
 
@@ -88,6 +88,6 @@ post_remove(){
     sleep 0.5
 
     # D O N E! #
-    echo -e "\n${BGreen}[✔] D O N E \n"
+    echo -e "\n${BGreen}[✔] D O N E \n" ${Color_Off}
 
 }
