@@ -54,7 +54,7 @@ BUILD_PKG () {
 
     # cleaning building #
     echo -e "\n${BRed}[+] cleaning building files..."
-    # rm -rf src pkg
+    rm -rf src pkg
 
     # D O N E! #
     echo -e "\n${BGreen}[✔] D O N E \n"
