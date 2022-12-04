@@ -2,7 +2,7 @@
 # Maintainer: Mahmoud Mohamed (00xWolf) <mmsaeed509@gmail.com> , <https://github.com/mmsaeed509>
 #
 
-pkgname=Predator-Sense-systemd-git
+pkgname=Predator-Sense
 pkgver=1.0
 pkgrel=3
 pkgdesc="The CLI implementation of Predator Sense for Acer Predator Helios laptops to control CPU/GPU fans and keyboard RGB color"
