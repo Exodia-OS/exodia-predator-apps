@@ -4,10 +4,13 @@
 
 pkgname=Predator-Sense-GUI
 pkgver=0.4.6
-pkgrel=2
+pkgrel=3
 pkgdesc="The GUI implementation of Predator Sense CLI app"
 arch=("any")
-depends=("python-wxpython")
+depends=(
+  "python-wxpython"
+  "Predator-Sense-CLI"
+  )
 license=("MIT")
 groups=("exodia-predator-apps")
 
