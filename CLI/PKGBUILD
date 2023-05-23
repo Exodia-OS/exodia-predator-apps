@@ -3,7 +3,7 @@
 #
 
 pkgname=Predator-Sense-CLI
-pkgver=1.0
+pkgver=6b8f71b
 pkgrel=9
 pkgdesc="The CLI implementation of Predator Sense for Acer Predator Helios laptops to control CPU/GPU fans and keyboard RGB color in Linux"
 arch=('any')
