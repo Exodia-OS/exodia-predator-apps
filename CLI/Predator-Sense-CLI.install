@@ -26,10 +26,6 @@ post_install() {
     echo -e ${BRed}"\n[*] Installing ${BPurple}${PKG_NAME} ${BRed}Service." ${Color_Off}
     sleep 0.5
 
-    echo -e ${BRed}"    ==> ${BCyan}Reloading systemd files" ${Color_Off}
-    sudo systemctl daemon-reload
-    sleep 0.5
-
     echo -e ${BRed}"    ==> ${BCyan}Starting ${BPurple}${PKG_NAME} ${BCyan}Service." ${Color_Off}
     sudo systemctl start turbo-fan
     sleep 0.5
@@ -67,7 +63,7 @@ post_upgrade() {
 
 }
 
-post_remove(){
+pre_remove(){
 
     echo -e ${BRed}"\n[*] Uninstalling ${BPurple}${PKG_NAME} ${BRed}Service." ${Color_Off}
     
@@ -77,10 +73,6 @@ post_remove(){
 
     echo -e ${BRed}"    ==> ${BCyan}Disabling ${BPurple}${PKG_NAME} ${BCyan}Service" ${Color_Off}
     sudo systemctl disable turbo-fan
-    sleep 0.5
-
-    echo -e ${BRed}"    ==> ${BCyan}Reloading systemd files" ${Color_Off}
-    sudo systemctl daemon-reload
     sleep 0.5
 
     echo -e ${BRed}"    ==> ${BCyan}Removing ${BPurple}${PKG_NAME} ${BCyan}source code files" ${Color_Off}
