@@ -45,12 +45,12 @@ post_upgrade() {
     echo -e ${BRed}"\n[*] Updating ${BPurple}${PKG_NAME} ${BRed}Service." ${Color_Off}
     sleep 0.5
 
-    echo -e ${BRed}"    ==> ${BCyan}Reloading systemd files" ${Color_Off}
+    echo -e ${BRed}"    ==> ${BCyan}Reloading systemd configuration" ${Color_Off}
     sudo systemctl daemon-reload
     sleep 0.5
 
-    echo -e ${BRed}"    ==> ${BCyan}Starting ${BPurple}${PKG_NAME} ${BCyan}Service." ${Color_Off}
-    sudo systemctl start turbo-fan
+    echo -e ${BRed}"    ==> ${BCyan}Restarting ${BPurple}${PKG_NAME} ${BCyan}Service." ${Color_Off}
+    sudo systemctl restart turbo-fan
     sleep 0.5
 
     echo -e ${BRed}"    ==> ${BCyan}Enabling ${BPurple}${PKG_NAME} ${BCyan}Service on startup." ${Color_Off}
