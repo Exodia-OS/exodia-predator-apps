@@ -142,7 +142,6 @@ static const struct key_entry acer_wmi_keymap[] __initconst = {
 	{KE_END, 0}
 };
 
-
 static struct input_dev *acer_wmi_input_dev;
 static struct input_dev *acer_wmi_accel_dev;
 
@@ -3100,7 +3099,7 @@ static struct platform_driver acer_platform_driver = {
 				.pm = &acer_pm,
 		},
 		.probe = acer_platform_probe,
-		.remove = acer_platform_remove,
+		.remove = (void*)acer_platform_remove,
 		.shutdown = acer_platform_shutdown,
 };
 
