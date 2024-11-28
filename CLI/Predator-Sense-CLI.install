@@ -1,3 +1,5 @@
+#!/bin/bash
+
 ## ------------ COLORS ------------ ##
 
 # Reset #
@@ -20,6 +22,16 @@ On_Black='\033[40m' On_Red='\033[41m'    On_Green='\033[42m' On_Yellow='\033[43m
 On_Blue='\033[44m'  On_Purple='\033[45m' On_Cyan='\033[46m'  On_White='\033[47m'
 
 PKG_NAME="Predator Sense"
+target_dir=/opt/turbo-fan
+
+pre_install() {
+	
+    echo -e ${BRed}"\n[*] Preparing Service Before Installing Files." ${Color_Off}
+    sleep 0.5
+    cd $target_dir
+    ./install_service.sh
+}
+
 
 post_install() {
 
@@ -39,6 +51,13 @@ post_install() {
     echo -e "\n${BGreen}[✔] D O N E \n" ${Color_Off}
 
 }
+
+pre_upgrade() {
+
+	pre_install
+
+}
+
 
 post_upgrade() {
 

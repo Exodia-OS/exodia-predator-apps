@@ -9,7 +9,7 @@ Restart=no
 RemainAfterExit=yes
 User=root
 WorkingDirectory=/opt/turbo-fan
-ExecStart=/bin/bash ./install.sh
+ExecStart=/bin/bash /opt/turbo-fan/service.sh
 ExecStop=/bin/bash ./uninstall.sh
 
 [Install]
