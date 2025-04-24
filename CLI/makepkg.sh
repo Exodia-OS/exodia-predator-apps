@@ -44,7 +44,7 @@ exit_on_signal_SIGTERM () {
 trap exit_on_signal_SIGINT SIGINT
 trap exit_on_signal_SIGTERM SIGTERM
 
-CLEANINH_BUILDING_DIR (){
+CLEANING_BUILDING_DIR (){
 
     # cleaning building #
     echo -e "\n${BRed}[+] cleaning building files...${RESET_COLOR}"
@@ -87,7 +87,7 @@ BUILD_PKG () {
             echo -e "\n${BRed}[+] moving new package to parent directory before cleaning building files${RESET_COLOR}"
             mv ./*.pkg.tar.zst ../
             sleep 0.5
-            CLEANINH_BUILDING_DIR
+            # CLEANING_BUILDING_DIR
             
             # D O N E! #
             echo -e "\n${BGreen}[✔] D O N E \n${RESET_COLOR}"
